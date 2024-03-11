@@ -1,0 +1,10 @@
+matplotlib
+numpy
+pandas
+requests
+torch
+fastapi
+uvicorn[standard]
+torchvision
+
+#-e .
