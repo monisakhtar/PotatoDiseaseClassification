@@ -25,6 +25,3 @@ with open(data_path / "PlantVillage.zip", "wb") as f:
 with zipfile.ZipFile(data_path / "PlantVillage.zip", "r") as zip_ref:
     print("Unzipping Plant Village data...")
     zip_ref.extractall(image_path)
-
-# Remove zip file
-os.remove(data_path / "PlantVillage.zip")
