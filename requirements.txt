@@ -6,5 +6,6 @@ torch
 fastapi
 uvicorn[standard]
 torchvision
+tqdm
 
 #-e .
