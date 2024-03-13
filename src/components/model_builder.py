@@ -2,7 +2,7 @@ import torch
 from torch import nn 
 torch.manual_seed(42)
 torch.cuda.manual_seed(42)
-class BaseModel_0(nn.Module):
+class BaseModel(nn.Module):
     def __init__(self, input_shape: int, hidden_units: int, output_shape: int):
         super().__init__()
         self.conv_block_1 = nn.Sequential(
