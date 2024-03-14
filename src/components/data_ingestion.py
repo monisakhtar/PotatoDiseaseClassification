@@ -1,6 +1,5 @@
 import os
 import sys
-from src.exception import CustomException
 import requests
 import zipfile
 from pathlib import Path
@@ -14,6 +13,8 @@ def append_parent_dir(currentdir):
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = append_parent_dir(currentdir)
 append_parent_dir(parentdir) 
+
+from src.exception import CustomException
     
 @dataclass
 class ImageDataIngestionConfig:
@@ -48,3 +49,7 @@ class DataIngestion:
             return self.ingestion_config.image_path
         except Exception as e:
             raise CustomException(e, sys)
+        
+if __name__ == "__main__":
+    obj = DataIngestion()
+    obj.initiate_imagedata_ingestion()
