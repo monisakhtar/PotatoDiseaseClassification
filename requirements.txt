@@ -3,7 +3,7 @@ numpy
 pandas
 requests
 torch
-fastapi
+fastapi[all]
 uvicorn[standard]
 torchvision
 tqdm
