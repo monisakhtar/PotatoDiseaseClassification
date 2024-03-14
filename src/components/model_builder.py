@@ -1,3 +1,15 @@
+import os
+import sys
+
+def append_parent_dir(currentdir):
+    parentdir = os.path.dirname(currentdir)
+    sys.path.append(parentdir)
+    return parentdir
+
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = append_parent_dir(currentdir)
+append_parent_dir(parentdir) 
+
 import torch
 from torch import nn 
 torch.manual_seed(42)
