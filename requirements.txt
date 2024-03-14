@@ -7,5 +7,6 @@ fastapi[all]
 uvicorn[standard]
 torchvision
 tqdm
+streamlit
 
 #-e .

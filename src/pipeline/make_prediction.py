@@ -19,6 +19,11 @@ from torchvision import transforms
 
 # Setup class names
 class_names = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
+label_map = {
+    'Potato___Early_blight': 'Early Blight',
+    'Potato___Late_blight': 'Late Blight',
+    'Potato___healthy': 'Healthy'
+}
 
 # Setup device
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -66,5 +71,5 @@ def predict_on_image(image=str):
         pred_label = torch.argmax(pred_prob, dim=1)
         pred_label_class = class_names[pred_label]
 
-    return pred_label_class, max(pred_prob.squeeze().tolist())
+    return label_map[pred_label_class], max(pred_prob.squeeze().tolist())
 
