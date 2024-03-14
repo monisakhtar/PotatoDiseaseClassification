@@ -36,7 +36,7 @@ class DataIngestion:
 
             # Download PlantVillage data
             with open(self.ingestion_config.data_path / "PlantVillage.zip", "wb") as f:
-                request = requests.get("https://github.com/monisakhtar/PotatoDiseaseClassification/raw/main/data/PlantVillage.zip")
+                request = requests.get("https://github.com/monisakhtar/PotatoDiseaseClassification/raw/main/bin/PlantVillage.zip")
                 print("Downloading Plant Village data...")
                 f.write(request.content)
                 f.close()
